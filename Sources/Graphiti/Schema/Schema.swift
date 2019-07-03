@@ -96,3 +96,11 @@ extension Schema {
         }
     }
 }
+
+extension Schema : Encodable {
+    
+    public func encode(to encoder: Encoder) throws {
+        try schema.encode(to: encoder)
+    }
+    
+}
